@@ -34,7 +34,7 @@ const authenticate = ({ clientID, clientSecret }) => {
 
 const GNRequest = async (credentials) => {
   const authResponse = await authenticate(credentials);
-  const accessToken = authResponse.data?.access_token;
+  const accessToken = authResponse.data.access_token;
 
   return axios.create({
     baseURL: process.env.GN_ENDPOINT,
